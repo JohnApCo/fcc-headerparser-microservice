@@ -26,8 +26,7 @@ app.get("/api/hello", function (req, res) {
 });
 
 //Api route
-app.get("/api/whoami", function (req, res) {
-  /* res.json(req.headers); */
+app.get("/api/whoami", (req, res) => {
   res.json({
     ipaddress: req.ip,
     language: req.headers["accept-language"],
